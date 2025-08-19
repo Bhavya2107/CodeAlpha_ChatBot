@@ -22,7 +22,7 @@ def tell_joke():
 
 def calculate(expression):
     try:
-        # Basic arithmetic evaluation
+        
         result = eval(expression, {"__builtins__": {}}, {"math": math})
         return f"The result is {result}"
     except Exception:
@@ -59,7 +59,6 @@ def chatbot():
         user_input = input("You: ").strip().lower()
         conversation.append(f"You: {user_input}")
         
-        # Split input to handle commands with arguments
         parts = user_input.split(maxsplit=1)
         command = parts[0] if parts else ""
         argument = parts[1] if len(parts) > 1 else ""
